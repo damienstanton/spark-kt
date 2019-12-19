@@ -3,7 +3,6 @@ package com.damienstanton.spark
 import org.apache.spark.sql.SparkSession
 
 class Main {
-    
     companion object {
         private var file = ""
         @JvmStatic
@@ -23,13 +22,11 @@ class Main {
                 .textFile(this.file)
                 .cache()
 
-            val numAs = logData.filter{ it.contains("a") }.count()
-            val numBs = logData.filter{ it.contains("b") }.count()
+            val numAs = logData.filter { it.contains("a") }.count()
+            val numBs = logData.filter { it.contains("b") }.count()
 
             println("A count: $numAs, B count: $numBs")
-
             spark.stop()
-
         }
     }
 }

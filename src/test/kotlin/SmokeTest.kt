@@ -16,8 +16,8 @@ class SmokeTest {
             .textFile(file)
             .cache()
 
-        val numAs = logData.filter{ it.contains("a") }.count()
-        val numBs = logData.filter{ it.contains("b") }.count()
+        val numAs = logData.filter { it.contains("a") }.count()
+        val numBs = logData.filter { it.contains("b") }.count()
 
         assertEquals(1, numAs)
         assertEquals(0, numBs)
